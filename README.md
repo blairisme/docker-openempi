@@ -12,14 +12,15 @@ Docker environment for [OpenEMPI] (http://www.openempi.org/), an open source imp
 
 1. Install [Docker] (https://www.docker.com).
 2. Clone the repository.
-3. Open a terminal in the directory where you cloned the repo.
-4. Run `docker-compose up`.
-5. Once the startup process completes your terminal should display a message saying:
+3. Download `openempi-entity-webapp-web-3.3.0c.war` and put it under `application/openempi-3.3.0`.
+4. Open a terminal in the directory where you cloned the repo.
+5. Run `docker-compose up`.
+6. Once the startup process completes your terminal should display a message saying:
   * `INFO: Server startup in {time}`.
-6. Find the ip of your Docker environment:
+7. Find the ip of your Docker environment:
   * If you are using Docker toolbox this tends to be `192.168.99.100`.
   * If you are using a native Docker installation it will be `localhost`.
-7. You can now visit `{docker-ip}:8080/openempi-admin` using your favorite browser or connect to the RESTful API via `{docker-ip}:8080/{rest-query}`.
+8. You can now visit `{docker-ip}:8080/openempi-admin` using your favorite browser or connect to the RESTful API via `{docker-ip}:8080/{rest-query}`.
 
 ## Data Storage and Persistence
 

@@ -2,7 +2,7 @@ FROM postgres:9.4
 
 MAINTAINER Alessandro Fael Garcia <alessfg@hotmail.com>
 
-LABEL OpenEMPI-Version="3.1.0" \
+LABEL OpenEMPI-Version="3.3.0" \
       Description="Docker image for the openEMPI database"
 
 # Copy files required to initialise Postgres with the OpenEMPI database schema

@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 
 services:
 
@@ -13,9 +13,13 @@ services:
     # Do not start application container until postgres container is started
     depends_on:
       - postgres
-
+    # Limit memory use
+    mem_limit: 1536m
+    
   postgres:
     # Build database using Dockerfile contained in postgres subfolder
     build: ./postgres
     # Name image
     image: openempi-db
+    # Limit memory use
+    mem_limit: 24m

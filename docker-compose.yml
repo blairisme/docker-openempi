@@ -14,8 +14,8 @@ services:
     depends_on:
       - postgres
     # Limit memory use
-    mem_limit: 1536m
-    
+    mem_limit: 2048m
+
   postgres:
     # Build database using Dockerfile contained in postgres subfolder
     build: ./postgres

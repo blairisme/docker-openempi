@@ -23,4 +23,4 @@ services:
     # Name image
     image: openempi-db
     # Restrict memory use to 24 megabytes
-    mem_limit: 24m
+    mem_limit: 128m

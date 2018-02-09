@@ -1,0 +1,9 @@
+version: "2.2"
+
+services:
+  app:
+    # Use host network. This allows app to be accessed by the outside world.
+    build:
+      network: host
+    # Limit memory use to 3 gigabytes
+    mem_limit: 3072m

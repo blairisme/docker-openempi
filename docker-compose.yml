@@ -1,25 +1,26 @@
-version: "2"
+version: "2.2"
 
 services:
-
+  # Configuration for the EMPI service.
   app:
     # Build application using Dockerfile contained in application subfolder
     build: ./application
-    # Name image
+    # Image name
     image: openempi-app
     # Map application container port 8080 to docker port 8080
     ports:
       - "8080:8080"
+    # Limit memory use to 2 gigabytes
+    mem_limit: 2048m
     # Do not start application container until postgres container is started
     depends_on:
       - postgres
-    # Limit memory use
-    mem_limit: 2048m
 
+  # Configuration for the postgres service. This service populates the EMPI DB.
   postgres:
     # Build database using Dockerfile contained in postgres subfolder
     build: ./postgres
     # Name image
     image: openempi-db
-    # Limit memory use
+    # Restrict memory use to 24 megabytes
     mem_limit: 24m

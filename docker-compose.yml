@@ -10,8 +10,8 @@ services:
     # Map application container port 8080 to docker port 8080
     ports:
       - "8080:8080"
-    # Limit memory use to 2 gigabytes
-    mem_limit: 2048m
+    # Limit memory use to 3 gigabytes
+    mem_limit: 3072m
     # Do not start application container until postgres container is started
     depends_on:
       - postgres
